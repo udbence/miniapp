@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+
+  frontend:
+    image: nginx:1.21.6-alpine
+    volumes:
+      - "./frontend:/usr/share/nginx/html:ro"
+    ports:
+      - "${FRONTEND_PUBLISHED_PORT}:80"
+    networks:
+      - pm-buli-network
+
+  backend:
+    build: ./server
+    volumes:
+      - "./server/db.json:/db.json:rw"
+    ports:
+      - "${BACKEND_PUBLISHED_PORT}:3000"
+    networks:
+      - pm-buli-network
+
+networks:
+  pm-buli-network:
