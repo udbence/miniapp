@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+
+  frontend:
+    image: nginx:1.21.6-alpine
+    volumes:
+      - "./frontend:/usr/share/nginx/html:rw"
+    ports:
+      - "80:80"
+    networks:
+      - miniapp-all
+
+  backend:
+    build: ./server
+    volumes:
+      - "./server/db.json:/db.json:rw"
+    ports:
+      - "3000:3000"
+    networks:
+      - miniapp-all
+
+networks:
+  miniapp-all:
