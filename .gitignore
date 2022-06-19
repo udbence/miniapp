@@ -1,5 +1,5 @@
-./frontend/Dockerfile
-./frontend/.dockerignore
-./server/Dockerfile
-./server/.dockerignore
-./docker-compose.yml
+frontend/Dockerfile
+frontend/.dockerignore
+server/Dockerfile
+server/.dockerignore
+docker-compose.yml
