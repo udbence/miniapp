@@ -1,6 +1,6 @@
 {
   "users": [
-    {      
+    {
       "name": "Zoli",
       "willCome": true,
       "drinkList": [
@@ -55,6 +55,14 @@
         "Sör"
       ],
       "userIsComing": true
+    },
+    {
+      "name": "bence",
+      "willCome": true,
+      "drinkList": [
+        "Sör",
+        "Whiskey"
+      ]
     }
   ]
 }
